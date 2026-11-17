@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Despacho 24h — SOS Pneus & Borracharia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Lora:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o painel da base</a>
+
+  <header class="emergency-status-bar">
+    <div class="status-bar-inner">
+      <a href="/index.html" style="color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 1.25rem;">
+        ← Voltar para SOS Pneus 24h
+      </a>
+      <span class="live-pulse-badge">Painel de Despacho de Viaturas (Demo)</span>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="main-container">
+    <section id="sec-login-sos" style="max-width: 500px; margin: 20px auto;" aria-labelledby="login-sos-title">
+      <div class="dispatch-card">
+        <h1 id="login-sos-title" style="font-size: 1.65rem; font-weight: 700; margin-bottom: 8px;">Central de Operações 24h</h1>
+        <p style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-muted); margin-bottom: 16px;">
+          Controle os chamados de socorro na rua e atualize o status das viaturas móveis.
+        </p>
+        <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+          <button type="button" id="btn-demo-base" class="btn btn-outline" style="min-height: 36px; padding: 6px 12px; font-size: 0.82rem;">Preencher Operador Base</button>
+          <button type="button" id="btn-demo-frota" class="btn btn-outline" style="min-height: 36px; padding: 6px 12px; font-size: 0.82rem;">Preencher Socorrista</button>
+        </div>
+        <form id="form-login-sos" novalidate>
+          <div class="form-group">
+            <label for="sos-login-email" class="form-label">E-mail Operacional</label>
+            <input type="email" id="sos-login-email" class="form-input" value="base@sospneus-demo.com.br" required>
+          </div>
+          <div class="form-group">
+            <label for="sos-login-senha" class="form-label">Senha</label>
+            <input type="password" id="sos-login-senha" class="form-input" value="SOSPneus@2026" required>
+          </div>
+          <div id="sos-login-fb" aria-live="polite" style="margin-bottom: 10px;"></div>
+          <button type="submit" class="btn btn-yellow" style="width: 100%;">Acessar Central 24h</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="sec-painel-sos" style="display: none;" aria-label="Chamados de Socorro Ativos">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h1 style="font-size: 1.9rem; font-weight: 700;">Chamados de Socorro Móvel em Tempo Real</h1>
+          <p id="sos-user-info" style="color: var(--primary-yellow); font-weight: 700;"></p>
+        </div>
+        <button type="button" id="btn-sair-sos" class="btn btn-outline">Encerrar Plantão</button>
+      </div>
+      <div id="lista-chamados-admin" style="display: grid; gap: 16px;"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="main-container" style="padding: 0;">
+      <div class="fictional-alert">
+        <strong>⚠️ AVISO DE DEMONSTRAÇÃO DE PORTFÓLIO (DADOS FICTÍCIOS)</strong>
+        <p>Painel demonstrativo desenvolvido pela Nuvetec. Todos os dados são fictícios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/painel.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SOS Pneus & Borracharia Móvel 24 Horas — Resgate na Rua em 20 Minutos, Vulcanização e Pneus Novos por Medida. Portfólio Nuvetec.">
+  <title>SOS Pneus & Borracharia 24h — Socorro Móvel Rápido & Pneus por Medida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700;800&family=Lora:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o formulário de socorro 24h</a>
+
+  <!-- Barra de Status de Plantão 24h -->
+  <header class="emergency-status-bar">
+    <div class="status-bar-inner">
+      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <a href="/index.html" style="text-decoration: none; color: #FFFFFF; font-weight: 700; font-size: 1.35rem; display: flex; align-items: center; gap: 8px;">
+          <span style="background: var(--primary-yellow); color: #090D16; padding: 2px 10px; border-radius: 8px; font-weight: 800;">SOS</span>
+          <span>Pneus & Borracharia 24h</span>
+        </a>
+        <span class="live-pulse-badge">● 3 Furgões Móveis em Plantão Agora</span>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        <span>Portfólio Oficial <strong>Nuvetec</strong> (Layout 03/05 • Dados Fictícios)</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="main-container">
+    <!-- Command Center Split Hero -->
+    <section id="socorro-imediato" class="command-hero-grid" aria-labelledby="sos-hero-title">
+      <div class="hero-callout-panel">
+        <span style="color: var(--primary-yellow); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem;">
+          ⚡ Atendimento de Emergência 24 Horas (Inclusive Domingos e Feriados)
+        </span>
+        <h1 id="sos-hero-title" class="hero-title">
+          Pneu furou ou rasgou na rua? <span>A borracharia móvel vai até você.</span>
+        </h1>
+        <p class="hero-desc">
+          Furgões equipados com compressor pneumático, chave de impacto com controle de torque, vulcanizadora e estoque de pneus novos nas medidas mais rodadas do Brasil.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+          <a href="#form-despacho-sos" class="btn btn-yellow">
+            🚨 Acionar Socorro Móvel Agora
+          </a>
+          <a href="#buscador-medidas" class="btn btn-outline">
+            Consultar Pneus por Medida
+          </a>
+        </div>
+
+        <div class="gps-quick-grid">
+          <div>
+            <strong style="display: block; color: var(--primary-yellow); font-size: 1.05rem;">📍 Vai vir até nossa Base Fixa 24h?</strong>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
+              Av. Salim Farah Maluf, 3100 — Tatuapé, São Paulo/SP (Acesso fácil sem degrau para carros rebaixados ou blindados).
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <a href="https://waze.com/ul" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="min-height: 42px; padding: 8px 14px; font-size: 0.88rem;">
+              🗺️ Abrir no Waze
+            </a>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="min-height: 42px; padding: 8px 14px; font-size: 0.88rem;">
+              📍 Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculadora de Despacho e Acionamento da Viatura -->
+      <div class="dispatch-card" role="region" aria-labelledby="dispatch-heading">
+        <h2 id="dispatch-heading" style="font-size: 1.45rem; font-weight: 700; margin-bottom: 6px;">
+          Acionamento Rápido do Furgão SOS
+        </h2>
+        <p style="font-family: var(--font-serif); font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+          Calcule o tempo estimado de chegada e a taxa de deslocamento antes de confirmar:
+        </p>
+
+        <form id="form-despacho-sos" novalidate>
+          <div style="display: none;" aria-hidden="true">
+            <label for="sos_website_honeypot">Não preencha</label>
+            <input type="text" id="sos_website_honeypot" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label for="sos-emergencia" class="form-label">Qual a emergência?</label>
+              <select id="sos-emergencia" class="form-select">
+                <option value="Pneu Furado / Troca de Estepe">Pneu Furado / Trocar Estepe</option>
+                <option value="Pneu Rasgado (Levar Pneu Novo)">Pneu Rasgado (Levar Pneu Novo)</option>
+                <option value="Bateria / Auxílio de Partida">Socorro de Bateria 12V</option>
+                <option value="Vulcanização na Base">Vou levar na Base Fixa 24h</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sos-distancia" class="form-label">Distância Estimada (KM)</label>
+              <input type="number" id="sos-distancia" class="form-input" value="5" min="1" max="50">
+            </div>
+          </div>
+
+          <div id="sos-eta-box" class="eta-display-box" aria-live="polite">
+            Calculando tempo de chegada...
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label for="sos-nome" class="form-label">Seu Nome *</label>
+              <input type="text" id="sos-nome" class="form-input" placeholder="Ex: Leandro Souza" required>
+            </div>
+            <div class="form-group">
+              <label for="sos-telefone" class="form-label">WhatsApp com DDD *</label>
+              <input type="tel" id="sos-telefone" class="form-input" placeholder="(11) 99123-4567" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sos-local" class="form-label">Onde você está parado? (Rua / Ponto de Referência) *</label>
+            <input type="text" id="sos-local" class="form-input" placeholder="Ex: Av. dos Estados próx. ao posto Ipiranga" required>
+          </div>
+
+          <div class="form-group">
+            <label for="sos-medida" class="form-label">Carro e Medida do Pneu (Se souber)</label>
+            <input type="text" id="sos-medida" class="form-input" placeholder="Ex: Onix — 185/65 R15">
+          </div>
+
+          <div class="form-group" style="font-size: 0.82rem; color: var(--text-body);">
+            <label style="display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+              <input type="checkbox" id="sos-lgpd" style="margin-top: 4px;" required>
+              <span>
+                Autorizo o uso da minha localização e telefone exclusivamente para o deslocamento do socorro, conforme a <a href="/termos.html" style="color: var(--primary-yellow); font-weight: 700;">Política LGPD</a> (Dados fictícios demonstrativos).
+              </span>
+            </label>
+          </div>
+
+          <div id="sos-feedback" aria-live="polite" style="margin-bottom: 12px;"></div>
+
+          <button type="submit" id="btn-submit-sos" class="btn btn-yellow" style="width: 100%;">
+            🚨 Despachar Viatura & Abrir WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Faixa de Confiança Avada (Trust Strip Socorro 24h) -->
+    <section class="avada-trust-strip" aria-label="Garantia e Padrões de Atendimento SOS Pneus 24h">
+      <div class="trust-strip-grid">
+        <div class="trust-strip-item">
+          <div class="trust-strip-icon" aria-hidden="true">⏱️</div>
+          <div class="trust-strip-content">
+            <strong>Chegada Média em 30 Minutos</strong>
+            <span>Viaturas posicionadas em pontos estratégicos</span>
+          </div>
+        </div>
+        <div class="trust-strip-item">
+          <div class="trust-strip-icon" aria-hidden="true">🚐</div>
+          <div class="trust-strip-content">
+            <strong>Furgão Oficina Completo</strong>
+            <span>Compressor, chave pneumática e vulcanizadora</span>
+          </div>
+        </div>
+        <div class="trust-strip-item">
+          <div class="trust-strip-icon" aria-hidden="true">🛞</div>
+          <div class="trust-strip-content">
+            <strong>Pneus Novos c/ Inmetro</strong>
+            <span>As principais medidas de aro 14 ao 22 a bordo</span>
+          </div>
+        </div>
+        <div class="trust-strip-item">
+          <div class="trust-strip-icon" aria-hidden="true">💳</div>
+          <div class="trust-strip-content">
+            <strong>Pagamento Direto no Local</strong>
+            <span>Cartão, Pix ou dinheiro na entrega do serviço</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buscador Instantâneo de Pneus por Medida -->
+    <section id="buscador-medidas" aria-labelledby="medidas-heading">
+      <div class="tire-finder-bar">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 id="medidas-heading" style="font-size: 1.75rem; font-weight: 700;">
+              Estoque Pronta-Entrega por Medida Exata
+            </h2>
+            <p style="font-family: var(--font-serif); font-size: 0.94rem; color: var(--text-muted);">
+              Clique na numeração gravada na lateral do seu pneu ou pesquise pelo modelo do seu carro:
+            </p>
+          </div>
+          <span id="contador-pneus" style="font-family: var(--font-mono); color: var(--primary-yellow); font-weight: 700;" aria-live="polite">
+            Carregando...
+          </span>
+        </div>
+
+        <div style="margin-top: 16px;">
+          <label for="busca-pneu-input" class="form-label">Buscar por Carro, Marca ou Medida</label>
+          <input type="search" id="busca-pneu-input" class="form-input" placeholder="Ex: Corolla, 205/55 R16, Michelin, Hilux...">
+        </div>
+
+        <div class="size-pills-row" role="group" aria-label="Filtrar por medida de pneu">
+          <button type="button" class="size-pill active" data-medida="Todas" aria-pressed="true">Todas as Medidas</button>
+          <button type="button" class="size-pill" data-medida="175/70 R14" aria-pressed="false">175/70 R14</button>
+          <button type="button" class="size-pill" data-medida="185/65 R15" aria-pressed="false">185/65 R15</button>
+          <button type="button" class="size-pill" data-medida="205/55 R16" aria-pressed="false">205/55 R16</button>
+          <button type="button" class="size-pill" data-medida="215/60 R17" aria-pressed="false">215/60 R17</button>
+          <button type="button" class="size-pill" data-medida="225/45 R17" aria-pressed="false">225/45 R17</button>
+          <button type="button" class="size-pill" data-medida="265/65 R17" aria-pressed="false">265/65 R17</button>
+        </div>
+      </div>
+
+      <div id="pneus-grid" class="tires-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Barra Flutuante Inferior (Floating Bottom Action Dock) -->
+  <nav class="floating-bottom-dock" aria-label="Ações Rápidas de Emergência">
+    <a href="#socorro-imediato" class="dock-item dock-cta">🚨 Socorro 24h</a>
+    <a href="#buscador-medidas" class="dock-item">🛞 Medidas de Pneus</a>
+    <a href="/painel.html" class="dock-item">📡 Base de Despacho</a>
+    <a href="/termos.html" class="dock-item">🛡️ Inmetro & LGPD</a>
+  </nav>
+
+  <!-- Rodapé com Aviso Explícito de Dados Fictícios + Transparência Fiscal -->
+  <footer class="site-footer">
+    <div class="main-container" style="padding: 0;">
+      <div class="fictional-alert" role="alert">
+        <strong style="color: var(--primary-yellow); font-size: 1.05rem; display: block; margin-bottom: 4px;">
+          ⚠️ AVISO DE DEMONSTRAÇÃO DE PORTFÓLIO (DADOS FICTÍCIOS)
+        </strong>
+        <p style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-body);">
+          Este website (<strong>SOS Pneus & Borracharia 24h</strong>) é uma peça demonstrativa criada pela <strong>Nuvetec</strong> para apresentação comercial. Todos os preços de pneus, tempos de chegada, viaturas, CNPJ e endereços são <strong>100% fictícios</strong>.
+        </p>
+      </div>
+
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">SOS Pneus & Borracharia 24 Horas</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Razão Social Fictícia: SOS Pneus Comércio e Socorro Automotivo 24h Ltda.<br>
+            CNPJ Demonstrativo: 19.876.543/0001-55<br>
+            Base Fixa Fictícia: Av. Salim Farah Maluf, 3100 — Tatuapé, São Paulo/SP — CEP 03076-000
+          </p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">Certificação Inmetro, CDC & LGPD</h3>
+          <ul style="list-style: none; font-size: 0.9rem;">
+            <li><a href="/termos.html" style="color: var(--primary-yellow);">Garantia de 5 Anos de Fábrica & Selo Inmetro</a></li>
+            <li><a href="/termos.html" style="color: var(--primary-yellow);">Direito de Arrependimento & Reembolso (CDC)</a></li>
+            <li><a href="/termos.html" style="color: var(--primary-yellow);">Canal de Direitos do Titular (LGPD)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">Plantão 24h & DPO</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Telefone Emergência (Fictício): 0800-777-2424 / (11) 97777-2424<br>
+            Encarregado de Dados (DPO): Dr. Rafael Costa — dpo@sospneus-demo.com.br<br>
+            © 2026 SOS Pneus • Engenharia <strong>Nuvetec</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/index.js"></script>
+</body>
+</html>

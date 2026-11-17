@@ -1,0 +1,11 @@
+{
+  "name": "sospneus",
+  "version": "1.0.0",
+  "description": "SOS Pneus & Borracharia 24 Horas — Auto Socorro Emergencial (Método ENDS)",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm --prefix backend install",
+    "start": "npm --prefix backend start",
+    "test": "npm --prefix backend test"
+  }
+}

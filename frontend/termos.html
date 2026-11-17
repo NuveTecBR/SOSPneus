@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmetro, CDC & Direitos LGPD — SOS Pneus 24h</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Lora:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para termos e LGPD</a>
+
+  <header class="emergency-status-bar">
+    <div class="status-bar-inner">
+      <a href="/index.html" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">← Voltar para SOS Pneus 24h</a>
+      <span class="live-pulse-badge">Transparência Inmetro, CDC & LGPD</span>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="main-container">
+    <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 16px;">Certificação Inmetro, Garantia CDC & Canal LGPD</h1>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      <article class="tire-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">1. Pneus Homologados pelo Inmetro</h2>
+        <p style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-body);">
+          Comercializamos exclusivamente pneus novos com selo de conformidade do Inmetro e garantia de fábrica de 5 anos contra defeitos de fabricação, além dos 90 dias legais do CDC.
+        </p>
+      </article>
+
+      <article class="tire-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">2. Transparência de Taxa de Socorro</h2>
+        <p style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-body);">
+          O valor do deslocamento da viatura móvel é calculado previamente de forma transparente antes da saída do furgão, sem cobranças surpresa no local.
+        </p>
+      </article>
+
+      <article class="tire-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">3. Direitos do Titular (Art. 18 LGPD)</h2>
+        <form id="form-lgpd-sos" novalidate>
+          <div class="form-group">
+            <label for="lgpd-nome" class="form-label">Nome Completo *</label>
+            <input type="text" id="lgpd-nome" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="lgpd-email" class="form-label">E-mail *</label>
+            <input type="email" id="lgpd-email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="lgpd-tipo" class="form-label">Solicitação</label>
+            <select id="lgpd-tipo" class="form-select">
+              <option value="Confirmacao">Confirmar tratamento de dados</option>
+              <option value="Acesso">Cópia de registros</option>
+              <option value="Exclusao">Exclusão de dados</option>
+            </select>
+          </div>
+          <div id="lgpd-sos-fb" aria-live="polite" style="margin-bottom: 10px;"></div>
+          <button type="submit" class="btn btn-yellow" style="width: 100%;">Registrar Solicitação LGPD</button>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="main-container" style="padding: 0;">
+      <div class="fictional-alert">
+        <strong>⚠️ AVISO DE DEMONSTRAÇÃO DE PORTFÓLIO (DADOS FICTÍCIOS)</strong>
+        <p>Este site é uma demonstração tecnológica desenvolvida pela Nuvetec. Todos os dados empresariais são fictícios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/termos.js"></script>
+</body>
+</html>
