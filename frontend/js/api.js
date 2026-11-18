@@ -112,7 +112,7 @@ export function inicializarCookiesLgpd() {
   bar.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap;">
       <div style="font-size: 0.86rem; color: #E2E8F0; max-width: 60ch;">
-        <strong style="color: #FACC15;">🍪 Privacidade e Cookies (LGPD):</strong> Utilizamos apenas cookies essenciais para cálculo de deslocamento e protocolo de socorro. Consulte nossos <a href="/termos.html" style="color: #FACC15; font-weight: 700;">Termos & Direitos LGPD</a>.
+        <strong style="color: #FACC15;">🍪 Privacidade e Cookies (LGPD):</strong> Utilizamos apenas cookies essenciais para cálculo de deslocamento e protocolo de socorro. Consulte nossos <a href="./termos.html" style="color: #FACC15; font-weight: 700;">Termos & Direitos LGPD</a>.
       </div>
       <button type="button" id="btnAceitarCookiesSos" class="btn btn-yellow" style="min-height: 38px; padding: 6px 14px;">Concordar</button>
     </div>
