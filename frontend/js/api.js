@@ -35,7 +35,59 @@ export function limparSessao() {
   localStorage.removeItem(USER_KEY);
 }
 
+async function staticDemoFetch(endpoint, options = {}) {
+  const { DEMO_DATA } = await import('./demo-data.js');
+  const url = new URL(endpoint, 'https://demo.local');
+  const path = url.pathname;
+  const body = options.body ? JSON.parse(options.body) : {};
+
+  if (path === '/api/pneus') {
+    let list = [...DEMO_DATA.pneus];
+    const medida = url.searchParams.get('medida');
+    const busca = (url.searchParams.get('busca') || '').toLowerCase();
+    if (medida) list = list.filter(p => p.medida === medida);
+    if (busca) list = list.filter(p => `${p.marca} ${p.modelo} ${p.medida} ${p.aplicacao_carros}`.toLowerCase().includes(busca));
+    return list;
+  }
+
+  if (path === '/api/socorro/calcular') {
+    const dist = Math.max(0, Number(body.distancia_km || 5));
+    const taxas = {
+      'Pneu Furado / Troca de Estepe': 95,
+      'Pneu Rasgado (Levar Pneu Novo)': 120,
+      'Vulcanização na Base': 65,
+      'Bateria / Auxílio de Partida': 110
+    };
+    const base = taxas[body.tipo_emergencia] || 95;
+    const naBase = body.tipo_emergencia === 'Vulcanização na Base';
+    const desloc = naBase ? 0 : dist * 4.5;
+    return {
+      distancia_km: dist,
+      tempo_chegada_min: naBase ? 0 : Math.min(45, Math.round(14 + dist * 1.8)),
+      taxa_saida_servico: base,
+      adicional_deslocamento: Number(desloc.toFixed(2)),
+      valor_total_estimado: Number((base + desloc).toFixed(2))
+    };
+  }
+
+  if (path === '/api/socorro/chamados') {
+    const calc = await staticDemoFetch('/api/socorro/calcular', { body: JSON.stringify(body) });
+    const protocolo = `SOS-DEMO-${Math.floor(1000 + Math.random() * 9000)}`;
+    return {
+      protocolo,
+      calculo: calc,
+      whatsapp_url: `https://wa.me/5551999990000?text=${encodeURIComponent(`SOS Pneus 24h (${protocolo})`)}`
+    };
+  }
+
+  return {};
+}
+
 export async function apiFetch(endpoint, options = {}) {
+  if (typeof window !== 'undefined' && window.location.hostname.endsWith('github.io')) {
+    return staticDemoFetch(endpoint, options);
+  }
+
   const token = obterToken();
   const headers = {
     'Content-Type': 'application/json',

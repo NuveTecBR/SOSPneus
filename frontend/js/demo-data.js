@@ -1,0 +1,95 @@
+// Dados demonstrativos estáticos para pré-visualização no GitHub Pages
+export const DEMO_DATA = {
+  "pneus": [
+    {
+      "id": 1,
+      "medida": "175/70 R14",
+      "aro": 14,
+      "marca": "Pirelli",
+      "modelo": "Cinturato P1 Plus",
+      "tipo_terreno": "Urbano / Estrada",
+      "indice_carga_vel": "88T XL",
+      "selo_inmetro": "Inmetro Aderência B • Consumo C • 69dB",
+      "preco_unitario": 389,
+      "preco_kit4": 1480,
+      "estoque": 16,
+      "aplicacao_carros": "VW Gol, Voyage, Fox, Fiat Palio, Strada, Siena, Chevrolet Onix Joy, Prisma",
+      "destaque": 1
+    },
+    {
+      "id": 2,
+      "medida": "185/65 R15",
+      "aro": 15,
+      "marca": "Michelin",
+      "modelo": "Energy XM2+",
+      "tipo_terreno": "Urbano / Estrada",
+      "indice_carga_vel": "88H",
+      "selo_inmetro": "Inmetro Aderência A • Consumo C • 68dB",
+      "preco_unitario": 479,
+      "preco_kit4": 1840,
+      "estoque": 12,
+      "aplicacao_carros": "Hyundai HB20, Chevrolet Onix Plus, Renault Sandero, Logan, Nissan Versa, Honda Fit",
+      "destaque": 1
+    },
+    {
+      "id": 3,
+      "medida": "205/55 R16",
+      "aro": 16,
+      "marca": "Continental",
+      "modelo": "PowerContact 2",
+      "tipo_terreno": "Urbano / Estrada",
+      "indice_carga_vel": "91V",
+      "selo_inmetro": "Inmetro Aderência B • Consumo B • 70dB",
+      "preco_unitario": 529,
+      "preco_kit4": 2020,
+      "estoque": 20,
+      "aplicacao_carros": "Toyota Corolla, Honda Civic, VW Virtus, Golf, Jetta, Chevrolet Cruze",
+      "destaque": 1
+    },
+    {
+      "id": 4,
+      "medida": "215/60 R17",
+      "aro": 17,
+      "marca": "Bridgestone",
+      "modelo": "Turanza T005 SUV",
+      "tipo_terreno": "SUV / Highway",
+      "indice_carga_vel": "96H",
+      "selo_inmetro": "Inmetro Aderência A • Consumo B • 71dB",
+      "preco_unitario": 689,
+      "preco_kit4": 2650,
+      "estoque": 8,
+      "aplicacao_carros": "Jeep Renegade, Compass, Hyundai Creta, Nissan Kicks, Renault Duster, Captur",
+      "destaque": 1
+    },
+    {
+      "id": 5,
+      "medida": "225/45 R17",
+      "aro": 17,
+      "marca": "Michelin",
+      "modelo": "Pilot Sport 5",
+      "tipo_terreno": "Urbano / Estrada",
+      "indice_carga_vel": "94Y XL",
+      "selo_inmetro": "Inmetro Aderência A • Alta Performance • 71dB",
+      "preco_unitario": 799,
+      "preco_kit4": 3080,
+      "estoque": 8,
+      "aplicacao_carros": "VW Golf GTI, Jetta GLI, Audi A3, BMW 320i, Mercedes C180, Corolla GR-S",
+      "destaque": 0
+    },
+    {
+      "id": 6,
+      "medida": "265/65 R17",
+      "aro": 17,
+      "marca": "BFGoodrich",
+      "modelo": "All-Terrain T/A KO2",
+      "tipo_terreno": "Carga / Utilitário",
+      "indice_carga_vel": "120/117S",
+      "selo_inmetro": "Inmetro Homologado Uso Misto Pesado",
+      "preco_unitario": 1290,
+      "preco_kit4": 4980,
+      "estoque": 6,
+      "aplicacao_carros": "Toyota Hilux, Chevrolet S10, Ford Ranger, VW Amarok, Mitsubishi L200 Triton",
+      "destaque": 0
+    }
+  ]
+};
